@@ -1,0 +1,97 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(50,30,20);
+}
+
+#title-card {
+  height: 15vh;
+  width: 100%;
+  background-color: rgb(200, 180, 130);
+  text-align: center;
+}
+
+#title-card span {
+  color: rgb(40,40,40);
+  display: inline-block;
+  vertical-align: middle;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 1000;
+  font-size: calc(3vw + 3vh);
+}
+
+#go-board {
+  position: relative;
+  width: 90vw;
+  height: 90vw;
+  max-height: 80vh;
+  max-width: 80vh;
+  margin: 2.5vh auto;
+  background-color: rgb(210, 105, 30);
+}
+
+
+/* Default small screen styles */
+.line {
+  position: absolute;
+  background-color: #000000;
+  box-sizing: border-box;
+}
+
+.vertical {
+  left: 2.75%;
+  width: 1px;
+  height: calc(100% - 5.5%);
+  top: 2.75%;
+}
+
+.horizontal {
+  width: calc(100% - 5.5%);
+  height: 1px;
+  left: 2.75%;
+  top: 2.75%;
+}
+
+/* Larger screen styles */
+@media (min-width: 768px) {
+  .vertical {
+    width: 2px;
+  }
+  
+  .horizontal {
+    height: 2px;
+  }
+}
+
+.stone {
+  position: absolute;
+  width: 4.5%;
+  height: 4.5%;
+  margin-left: -2.25%;
+  margin-top: -2.25%;
+  border-radius: 50%;
+}
+
+.ghost {
+  opacity: 0.5;
+  visibility: hidden;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.star {
+  position: absolute;
+  width: 1.2%; /* Adjust based on your desired star size */
+  height: 1.2%; /* Adjust based on your desired star size */
+  margin-left: -0.6%;
+  margin-top: -0.6%;
+  border-radius: 50%;
+  background-color: black;
+}
